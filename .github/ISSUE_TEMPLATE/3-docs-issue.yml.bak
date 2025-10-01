@@ -1,0 +1,27 @@
+name: 📗 Documentation Issue
+description: 告诉我们是否有缺失或不正确的文档
+labels: [docs]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您提交文档请求。这有助于让 Codex 变得更好。
+  - type: dropdown
+    attributes:
+      label: 问题的类型是什么？
+      multiple: true
+      options:
+        - 文档缺失
+        - 文档不正确
+        - 文档令人困惑
+        - 示例代码不工作
+        - 其他问题
+  - type: textarea
+    attributes:
+      label: 问题是什么？
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 您在哪里发现的？
+      description: 如果可能，请提供您发现此问题的 URL。

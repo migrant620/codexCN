@@ -1,0 +1,50 @@
+name: 🧑‍💻 VS Code Extension
+description: 报告 VS Code 扩展的问题
+labels:
+  - extension
+  - needs triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        在提交新问题之前，请搜索现有问题，看看您的问题是否已经被报告。
+        如果已经报告，请给现有问题添加一个👍反应（无需留下评论），而不是创建一个新问题。
+
+  - type: input
+    id: version
+    attributes:
+      label: 您使用的是哪个版本的 VS Code 扩展？
+  - type: input
+    id: ide
+    attributes:
+      label: 您使用的是哪个 IDE？
+      description: 如 `VS Code`、`Cursor`、`Windsurf` 等
+  - type: input
+    id: platform
+    attributes:
+      label: 您的计算机是什么平台？
+      description: |
+        对于 MacOS 和 Linux：复制 `uname -mprs` 的输出
+        对于 Windows：在 PowerShell 控制台中复制 `"$([Environment]::OSVersion | ForEach-Object VersionString) $(if ([Environment]::Is64BitOperatingSystem) { "x64" } else { "x86" })"` 的输出
+  - type: textarea
+    id: steps
+    attributes:
+      label: 什么步骤可以重现这个错误？
+      description: 解释这个错误并提供可以重现它的代码片段。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期的行为是什么？
+      description: 如果可能，请提供文本而不是截图。
+  - type: textarea
+    id: actual
+    attributes:
+      label: 您实际看到了什么？
+      description: 如果可能，请提供文本而不是截图。
+  - type: textarea
+    id: notes
+    attributes:
+      label: 附加信息
+      description: 还有什么您认为我们应该知道的吗？

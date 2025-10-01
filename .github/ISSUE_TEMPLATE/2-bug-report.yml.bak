@@ -1,0 +1,56 @@
+name: 🪲 Bug Report
+description: 报告一个需要修复的问题
+labels:
+  - bug
+  - needs triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您提交错误报告！这有助于让 Codex 变得更好。
+
+        如果您需要使用 Codex 的帮助或支持，而不是报告错误，请在 [codex/discussions](https://github.com/openai/codex/discussions) 上发布，您可以在那里提问或与他人就如何改进 codex 的想法进行交流。
+
+        确保您运行的是 [最新](https://npmjs.com/package/@openai/codex) 版本的 Codex CLI。您遇到的问题可能已经被修复。
+
+        请尽量包含尽可能多的信息。
+
+  - type: input
+    id: version
+    attributes:
+      label: 您正在运行哪个版本的 Codex？
+      description: 复制 `codex --version` 的输出
+  - type: input
+    id: model
+    attributes:
+      label: 您使用的是哪个模型？
+      description: 如 `gpt-4.1`、`o4-mini`、`o3` 等
+  - type: input
+    id: platform
+    attributes:
+      label: 您的计算机是什么平台？
+      description: |
+        对于 MacOS 和 Linux：复制 `uname -mprs` 的输出
+        对于 Windows：在 PowerShell 控制台中复制 `"$([Environment]::OSVersion | ForEach-Object VersionString) $(if ([Environment]::Is64BitOperatingSystem) { "x64" } else { "x86" })"` 的输出
+  - type: textarea
+    id: steps
+    attributes:
+      label: 什么步骤可以重现这个错误？
+      description: 解释这个错误并提供可以重现它的代码片段。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期的行为是什么？
+      description: 如果可能，请提供文本而不是截图。
+  - type: textarea
+    id: actual
+    attributes:
+      label: 您实际看到了什么？
+      description: 如果可能，请提供文本而不是截图。
+  - type: textarea
+    id: notes
+    attributes:
+      label: 附加信息
+      description: 还有什么您认为我们应该知道的吗？

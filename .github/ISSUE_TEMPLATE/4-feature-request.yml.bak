@@ -1,0 +1,31 @@
+name: 🎁 Feature Request
+description: 为 Codex 提出一个新功能
+labels:
+  - enhancement
+  - needs triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Codex 是否缺少您希望看到的功能？随时在这里提出。
+
+        在提交功能之前：
+        1. 搜索现有问题中是否有类似功能。如果找到，请给它一个👍而不是打开一个新的。
+        2. Codex 团队在优先考虑或拒绝新功能时会努力平衡社区的多样化需求。并非所有功能都会被接受。有关更多详细信息，请参阅[贡献指南](https://github.com/openai/codex#contributing)。
+
+  - type: textarea
+    id: feature
+    attributes:
+      label: 您希望看到什么功能？
+    validations:
+      required: true
+  - type: textarea
+    id: author
+    attributes:
+      label: 您有兴趣实现这个功能吗？
+      description: 在实现或打开 PR 之前，请等待确认。
+  - type: textarea
+    id: notes
+    attributes:
+      label: 附加信息
+      description: 还有什么您认为我们应该知道的吗？
